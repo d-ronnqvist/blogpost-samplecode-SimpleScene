@@ -13,6 +13,8 @@
 		6FCB49F61736D66600194319 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 6FCB49F41736D66600194319 /* Credits.rtf */; };
 		6FCB49F91736D66600194319 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCB49F81736D66600194319 /* AppDelegate.m */; };
 		6FCB49FC1736D66600194319 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FCB49FA1736D66600194319 /* MainMenu.xib */; };
+		6FCB4A031736D66E00194319 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCB4A021736D66E00194319 /* SceneKit.framework */; };
+		6FCB4A051736D67800194319 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCB4A041736D67800194319 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		6FCB49F71736D66600194319 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6FCB49F81736D66600194319 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6FCB49FB1736D66600194319 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6FCB4A021736D66E00194319 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		6FCB4A041736D67800194319 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FCB4A051736D67800194319 /* QuartzCore.framework in Frameworks */,
+				6FCB4A031736D66E00194319 /* SceneKit.framework in Frameworks */,
 				6FCB49E61736D66600194319 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +52,8 @@
 		6FCB49D91736D66600194319 = {
 			isa = PBXGroup;
 			children = (
+				6FCB4A041736D67800194319 /* QuartzCore.framework */,
+				6FCB4A021736D66E00194319 /* SceneKit.framework */,
 				6FCB49EB1736D66600194319 /* SimpleScene */,
 				6FCB49E41736D66600194319 /* Frameworks */,
 				6FCB49E31736D66600194319 /* Products */,
