@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'SimpleScene' target in the 'SimpleScene' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
