@@ -51,17 +51,17 @@
 	
     // A spot light
     // ------------
-    // The spot light is positioned above the camera and points
-    // down to the center of the scene using a transform
+    // The spot light is positioned right next to the camera
+    // so it is offset sligthly and added to the camera node
     SCNLight *spotLight = [SCNLight light];
     spotLight.type = SCNLightTypeSpot;
     spotLight.color = [NSColor redColor];
 	SCNNode *spotLightNode = [SCNNode node];
 	spotLightNode.light = spotLight;
-    spotLightNode.position = SCNVector3Make(-2, 30, 30);
-    spotLightNode.transform = CATransform3DRotate(spotLightNode.transform, -M_PI_4, 1, 0, 0);
+    spotLightNode.position = SCNVector3Make(-2, 1, 0);
     
-	[scene.rootNode addChildNode:spotLightNode];
+    [cameraNode addChildNode:spotLightNode];
+    
     
     // A square box
     // ------------
@@ -86,12 +86,17 @@
     // Create an repeating, reversing animation of the "color" property.
     // Animate from red to blue to green using an linear timing function.
     CAKeyframeAnimation *spotColor = [CAKeyframeAnimation animationWithKeyPath:@"color"];
-    spotColor.values = @[(id)[NSColor redColor], (id)[NSColor blueColor], (id)[NSColor greenColor], (id)[NSColor redColor]];
-    spotColor.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    spotColor.values = @[(id)[NSColor redColor],
+                         (id)[NSColor blueColor],
+                         (id)[NSColor greenColor],
+                         (id)[NSColor redColor]];
+    spotColor.timingFunction =
+      [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     spotColor.repeatCount = INFINITY;
     spotColor.duration = 3.0;
     
-    [spotLight addAnimation:spotColor forKey:@"ChangeTheColorOfTheSpot"];
+    [spotLight addAnimation:spotColor
+                     forKey:@"ChangeTheColorOfTheSpot"];
     
     // Rotating the box
     // ----------------
@@ -99,12 +104,17 @@
     // the x,y-diagonal. Make the animation linear and repeat it to give the
     // illusion of it being a continuous rotation
     CABasicAnimation *boxRotation = [CABasicAnimation animationWithKeyPath:@"transform"];
-    boxRotation.toValue = [NSValue valueWithCATransform3D:CATransform3DRotate(boxNode.transform, M_PI, 1, 1, 0)];
-    boxRotation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    boxRotation.toValue =
+      [NSValue valueWithCATransform3D:CATransform3DRotate(boxNode.transform,
+                                                          M_PI,
+                                                          1, 1, 0)];
+    boxRotation.timingFunction =
+      [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     boxRotation.repeatCount = INFINITY;
     boxRotation.duration = 2.0;
     
-    [boxNode addAnimation:boxRotation forKey:@"RotateTheBox"];
+    [boxNode addAnimation:boxRotation
+                   forKey:@"RotateTheBox"];
 }
 
 @end
