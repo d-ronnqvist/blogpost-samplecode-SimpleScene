@@ -15,6 +15,7 @@
 		6FCB49FC1736D66600194319 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FCB49FA1736D66600194319 /* MainMenu.xib */; };
 		6FCB4A031736D66E00194319 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCB4A021736D66E00194319 /* SceneKit.framework */; };
 		6FCB4A051736D67800194319 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FCB4A041736D67800194319 /* QuartzCore.framework */; };
+		6FCB4A081736D6B300194319 /* SimpleSceneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FCB4A071736D6B300194319 /* SimpleSceneView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		6FCB49FB1736D66600194319 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		6FCB4A021736D66E00194319 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		6FCB4A041736D67800194319 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6FCB4A061736D6B300194319 /* SimpleSceneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleSceneView.h; sourceTree = "<group>"; };
+		6FCB4A071736D6B300194319 /* SimpleSceneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleSceneView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 			children = (
 				6FCB49F71736D66600194319 /* AppDelegate.h */,
 				6FCB49F81736D66600194319 /* AppDelegate.m */,
+				6FCB4A061736D6B300194319 /* SimpleSceneView.h */,
+				6FCB4A071736D6B300194319 /* SimpleSceneView.m */,
 				6FCB49FA1736D66600194319 /* MainMenu.xib */,
 				6FCB49EC1736D66600194319 /* Supporting Files */,
 			);
@@ -176,6 +181,7 @@
 			files = (
 				6FCB49F21736D66600194319 /* main.m in Sources */,
 				6FCB49F91736D66600194319 /* AppDelegate.m in Sources */,
+				6FCB4A081736D6B300194319 /* SimpleSceneView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
