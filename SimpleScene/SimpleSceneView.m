@@ -45,7 +45,9 @@
 	SCNNode *cameraNode = [SCNNode node];
 	cameraNode.camera = [SCNCamera camera];
 	cameraNode.position = SCNVector3Make(0, 15, 30);
-    cameraNode.transform = CATransform3DRotate(cameraNode.transform, -M_PI/7.0, 1, 0, 0);
+    cameraNode.transform = CATransform3DRotate(cameraNode.transform,
+                                               -M_PI/7.0,
+                                               1, 0, 0);
     
     [scene.rootNode addChildNode:cameraNode];
 	
@@ -73,7 +75,8 @@
                                 length:boxSide
                          chamferRadius:0];
     SCNNode *boxNode = [SCNNode nodeWithGeometry:box];
-    boxNode.transform = CATransform3DMakeRotation(M_PI_2/3, 0, 1, 0);
+    boxNode.transform = CATransform3DMakeRotation(M_PI_2/3,
+                                                  0, 1, 0);
     
     [scene.rootNode addChildNode:boxNode];
     
@@ -115,6 +118,8 @@
     
     [boxNode addAnimation:boxRotation
                    forKey:@"RotateTheBox"];
+    
+    
 }
 
 @end
